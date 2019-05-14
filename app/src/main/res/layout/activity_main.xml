@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textSize="20sp"
+                    android:layout_weight="3"/>
+
+                <EditText
+                    android:id="@+id/nameEt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_name"
+                    android:layout_weight="7"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobile_no"
+                    android:textSize="20sp"
+                    android:layout_weight="3"/>
+
+                <EditText
+                    android:id="@+id/mobileEt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_mobile_number"
+                    android:layout_weight="7"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pax"
+                    android:textSize="20sp"
+                    android:layout_weight="3"/>
+
+                <EditText
+                    android:id="@+id/paxEt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_pax"
+                    android:layout_weight="7"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="20dp">
+
+                <CheckBox
+                    android:id="@+id/smokeCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/smoking_area"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+            
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <DatePicker
+                    android:id="@+id/dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false" />
+
+                <TimePicker
+                    android:id="@+id/tp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:timePickerMode="spinner"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp">
+
+                <Button
+                    android:id="@+id/reserveBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reserve"
+                    android:textSize="20sp"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/resetBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reset"
+                    android:textSize="20sp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        
+    </ScrollView>
+
+</LinearLayout>
