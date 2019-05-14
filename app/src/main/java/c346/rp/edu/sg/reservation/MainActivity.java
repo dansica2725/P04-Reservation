@@ -1,5 +1,7 @@
 package c346.rp.edu.sg.reservation;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +11,9 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import java.util.Calendar;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     TimePicker tp;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         tp = findViewById(R.id.tp);
 
         dp.updateDate(2019, 5, 1);
+        dp.setMinDate(System.currentTimeMillis() - 1000);
 
         tp.setCurrentHour(19);
         tp.setCurrentMinute(30);
@@ -92,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
                     String date = day + "/" + mth +"/" + year;
                     String time = hour + ":" + min;
 
-
                     if (!smokeCB.isChecked()) {
                         String smokeArea = "No";
                         addToast("Customer Info: \nName: " + name + "\n Mobile: " + mobile + "\n Pax: " + pax + "\n Smoking Area: " + smokeArea + "\n Date: " + date + "\n Time: " + time);
@@ -101,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
                         String smokeArea = "Yes";
                         addToast("Customer Info: \n Name: " + name + "\n Mobile: " + mobile + "\n Pax: " + pax + "\n Smoking Area: " + smokeArea + "\n Date: " + date + "\n Time: " + time);
                     }
-
                 }
                 else {
                     addToast("Inputs are empty!");
@@ -114,11 +119,11 @@ public class MainActivity extends AppCompatActivity {
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
                 if (hourOfDay >= 21) {
                     tp.setCurrentHour(20);
-                    tp.setCurrentMinute(0);
+                    tp.setCurrentMinute(00);
                 }
                 else if (hourOfDay < 8) {
                     tp.setCurrentHour(8);
-                    tp.setCurrentMinute(0);
+                    tp.setCurrentMinute(00);
                 }
             }
         });
