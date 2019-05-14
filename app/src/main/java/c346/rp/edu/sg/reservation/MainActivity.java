@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         tp = findViewById(R.id.tp);
 
-        dp.updateDate(2019, 6, 1);
+        dp.updateDate(2019, 5, 1);
 
         tp.setCurrentHour(19);
         tp.setCurrentMinute(30);
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
                 smokeCB.setChecked(false);
 
-                dp.updateDate(2019, 6, 1);
+                dp.updateDate(2019, 5, 1);
 
                 tp.setCurrentHour(19);
                 tp.setCurrentMinute(30);
