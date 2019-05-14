@@ -141,7 +141,12 @@
                     android:layout_height="wrap_content"
                     android:text="@string/reserve"
                     android:textSize="20sp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg" />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent" />
 
                 <Button
                     android:id="@+id/resetBtn"
@@ -149,7 +154,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/reset"
                     android:textSize="20sp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg"/>
 
             </LinearLayout>
 
